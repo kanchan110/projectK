@@ -1,0 +1,847 @@
+    6  uname -a
+    8  hostnamectl
+    9  add-apt-repository ppa:git-core/ppa
+   10  sudo add-apt-repository ppa:git-core/ppa
+   12  sudo apt update
+   13  sudo apt install git
+   14  clear
+   15  git --version
+   16  which git
+   17  ls -ltrh /usr/bin/git
+
+
+   22  pwd
+   23  mkdir projectK
+   24  ls -l
+   25  cd projectK/
+   26  ls -l
+   27  git init
+   28  ls -al
+   29  rm -rf .git/
+   30  ls -al
+   31  ls -al
+   32  git init
+   33  git status
+   34  git config user.name leaddevops
+   35  git config user.email leaddevops@gmail.com
+   36  git config user.email leaddevops@gmail.co
+   37  git config --list
+   38  git config user.email leaddevops@gmail.com
+   39  git config --list
+
+
+
+   43  git status
+   44  ls -l
+   45  vi 1.java
+   46  ls -l
+   47  git status
+   48  git add 1.java
+   49  git status
+   50  git commit -m "first commit"
+   51  git log
+   52  vi 2.java
+   53  git status
+   54  vi 1.java
+   55  ls -l
+   56  git status
+   57  git add --all
+   58  git status
+   59  git commit -m "second commit"
+   60  git log
+
+
+   14  git show 14455b04a0654b207d66059247dc0d7983911983
+   15  ls -l
+   16  touch 3.java 4.java
+   17  git status
+   18  vi 1.java
+   19  clear
+   20  git status
+   21  git add 4.java
+   22  git status
+   23  git commit -m "4.java"
+   24  git log
+   25  git show 6c9ff505be95ecd1bee2ff9b5fdab4b585ed4647
+   26  git status
+   27  git commit -am "test"
+   28  git status
+   29  git add 3.java
+   30  git commit -m "3.java"
+   31  git log
+   37  git commit --amend -m "modfied again"
+
+   42  vi 1.java
+   43  git status
+   44  git add 1.java
+   45  vi 3.java
+   46  clear
+   47  git add 3.java
+   48  git status
+   49  git restore --staged 1.java
+   50  git status
+   51  cat 1.java
+   52  git restore 1.java
+   53  git status
+   54  cat 1.java
+   55  clear
+   56  git status
+   57  git checkout 3.java
+   58  git status
+   59  cat 3.java
+   60  git commit -m "rest"
+   61  git log
+   62  git show 6c9ff505be95ecd1bee2ff9b5fdab4b585ed4647
+   63  ls
+   64  git log
+   65  ls
+   66  git revert 6c9ff505be95ecd1bee2ff9b5fdab4b585ed4647
+   67  ls
+   68  git log
+   69  ls
+   70  git revert 73022b670e20633d763b7313479061bcc53780b3
+   71  clear
+   72  ls
+   73  git log
+
+
+    9  git status
+   10  cd projectK/
+   11  git status
+   12  git config alias.st "status"
+   13  git st
+   14  git ct
+   15  git cmt
+   16  git config alias.cmt "commit"
+   17  git cmt
+
+
+  144  cd projectK/
+  145  ls -l
+  146  history
+  147  ls -l
+  148  ls -al
+  149  touch .gitignore
+  150  ls -l
+  151  ls -al
+  152  vi .gitignore
+  153  clear
+  154  ls -l
+  155  ls -al
+  156  cat .gitignore
+  157  git status
+  158  touch hello.info
+  159  git status
+  160  mkdir logs
+  161  git status
+  162  cd logs/
+  163  ls -l
+  164  touch hl.java
+  165  touch new.txt
+  166  cd ..
+  167  git status
+  168  touch 1.class
+  169  git status
+
+
+ubuntu@master:~/projectK$ cat .gitignore
+hello.info
+*.class
+logs/
+  174  git check-ignore
+  175  git check-ignore 1.class
+  176  git check-ignore 1.class 1.java
+  177  git check-ignore 1.java
+  178  git check-ignore -v 1.class 1.java
+  179  git status
+  180  ls -a
+  181  vi .git/info/exclude
+  182  clear
+  183  git status
+  184  touch naresh.txt
+  185  git status
+  186  mkdir naresh
+  187  cd naresh/
+  188  ls -l
+  189  touch now.txt
+  190  touch now.java
+  191  git status
+  192  cd ..
+  193  git status
+  194  clear
+  195  git status
+
+
+  197  git status --ignored
+  198  ls -l
+  199  vi 1.java
+  200  git status
+  201  git statu s
+  202  git status
+  203  git restore 1.java
+  204  git statu s
+  205  git st
+  206  git update-index --assume-unchanged 1.java
+  207  ls -l
+  208  vi 1.java
+  209  cat 1.java
+  210  git status
+  213  git update-index --no-assume-unchanged 1.java
+
+  217  git clean -Xn
+  218  git clean -Xf
+
+
+  221  git config --list
+  222  cat .git/config
+  223  git log
+  224  clear
+  225  cd ..
+  226  mkdir projectY
+  227  cd project
+  228  cd projectY/
+  229  git init
+  230  touch newx.t
+  231  git add .
+  232  git commit -m "new"
+  233  clear
+  234  git config --global user.name naresh
+  235  git config --global user.email naresh@gmail.com
+  236  git commit -m "new"
+  237  git log
+  238  cd ..
+  239  cd projectK/
+  240  git status
+  241  git add .
+  242  git commit -m "test"
+  243  git log
+  244  clear
+  245  echo $HOME
+  246  cd /home/ubuntu/
+  247  ls -al
+  248  cat .gitconfig
+  249  git config --system user.name lerndevops
+  250  sudo git config --system user.name lerndevops
+  251  sudo git config --system user.email lerndevops@gmail.com
+  252  sudo cat /etc/gitconfig
+  253  sudo git config --system user.name "nareshwar  reddy t"
+  254  sudo cat /etc/gitconfig
+  255  clear
+  256  git config --list --show-origin
+  257  cd projectK/
+  258  git config --list --show-origin
+
+
+
+  273  git remote -v
+  274  git remote add origin https://github.com/leaddevops/projectK.git
+  275  git remote -v
+  276  git branch
+  277  git branch -M main
+  278  git branch
+  279  git branch -M master
+  280  git branch
+  281  git branch -M main
+  282  git branch
+  283  git push origin main
+
+
+  159  git push origin main
+  160  touch 8.java
+  161  git add .
+  162  git commit -m "new"
+  163  git log
+  164  git push origin main
+  165  git config --global credential.helper store
+  166  git push origin main
+  167  vi now.java
+  168  git commit -am "testtt"
+  169  git push origin main
+  170  git push
+  171  git push -u origin main
+
+
+Dev2 laptop 
+
+git clone https://github.com/leaddevops/projectK.git
+cd projectK
+ls -l
+cd ..
+git clone https://github.com/leaddevops/samplejavaapp.git
+cd samplejavaapp
+ls -l
+git config --global --edit
+clear
+cd ..
+cd projectK
+ls -l
+clear
+ls -l
+vi 1.java
+clear
+touch dev2.txt
+git status
+git add .
+git config --global --list
+git config --global user.name naresh
+git config --global user.email naresh@gmail.com
+git config --global --list
+git commit -m "naresh"
+git log
+clear
+git push
+git remote -v
+
+
+Dev1 laptop 
+
+  147  cd projectK/
+  148  ls -l
+  149  git pull
+  150  git log
+
+
+
+
+  154  vi now.java
+  155  clear
+  156  git add .
+  157  git commit -m "dev1"
+  158  touch 6.java
+  159  git add .
+  160  git commit -m "dev1 again"
+  161  ls
+  162  git push
+
+
+ 1123  git fetch
+ 1124  ls
+ 1125  cat now.java
+ 1126  git fetch
+ 1127  git fetch --prune
+ 1128  git fetch
+ 1129  git pull
+
+
+
+  362  git remote -v
+  363  git remote rm origin
+  364  git remote -v
+  365  git remote add origin git@github.com:leaddevops/projectK.git
+  366  git remote -v
+  367  git push
+  368  git push --set-upstream origin main
+  369  echo $HOME
+  370  cd /home/ubuntu/
+  371  ls -l
+  372  ls -al
+  373  cd .ssh/
+  374  ls -l
+  375  cat authorized_keys
+  376  clear
+  377  ssh-keygen
+  378  ls -al
+  379  cat id_rsa.pub
+  380  cd ..
+  381  ls -l
+  382  cd projectK/
+  384  git remote -v
+  385  git push
+  386  git push -u origin main
+  387  git push
+  388  touch today.txt
+  389  git add .
+  390  git commit -m "today"
+  391  git push
+
+
+  402  git log
+  403  clear
+  404  git log
+  405  clear
+  406  git tag -a "v1.0.0" -m "release v1.0.0" e49feb6506aadfc8244eefea3cc32d27d82a68ef
+  407  git log
+  408  git tag -a "v1.0.1" -m "rel v1.0.1" 9d7366616669e7ada58315f36319ec8ec9e2fa20
+  409  git log
+  410  clear
+  411  git push
+  412  git push --tags
+  413  git branch
+  414  git push
+  415  touch t.ttxt
+  416  git add .
+  417  git commit -m "t"
+  418  git push
+  419  git branch
+  420  git branch -r
+  421  git branch -a
+  422  git fetch
+  423  git branch -a
+  424  git pull
+  425  git branch
+  426  git switch defect
+  427  git branch
+  428  git switch main
+  429  git branch
+  430  git checkout featy
+  431  clear
+  432  git branch
+  433  git switch defect
+
+
+  444  git branch -r
+  445  git branch -a
+  446  git pull
+  447  clear
+  448  git branch
+  449  git branch defect
+  450  git switch defect
+  451  git branch
+  452  ls
+  453  vi 4.java
+  454  clear
+  455  git status
+  456  git add .
+  457  git commit -m "d1"
+  458  touch defect.java
+  459  git add .
+  460  git commit -m "d2"
+  461  git log
+  462  clear
+  463  git push origin defect
+
+
+  463  git push origin defect
+  464  history
+  465  clear
+  466  git branch
+  467  git switch main
+  468  git branch
+  469  git merge defect
+  470  clear
+  471  git log
+
+
+
+
+
+  476  git log --oneline
+  477  cd ..
+  478  git init repo1
+  479  cd repo1/
+  480  ls -l
+  481  git status
+  482  touch 1.java
+  483  git add .
+  484  git commit -m "m1"
+  485  touch 2.java
+  486  git add .
+  487  git commit -m "m2"
+  488  git log
+  489  git log --oneline
+  490  git branch feat
+  491  git branch
+  492  git switch feat
+  493  git branch
+  494  git log --oneline
+  495  touch f1.java
+  496  git add .
+  497  git commit -m "f1"
+  498  touch f2.java
+  499  git add .
+  500  git commit -m "f2"
+  501  touch f3.java
+  502  git add .
+  503  git commit -m "f3"
+  504  clear
+  505  git log --oneline
+  506  git switch master
+  507  git log --oneline
+  508  git merge feat
+  509  git log --oneline --graph
+
+
+
+git init repo2
+cd repo2
+touch 1.java
+git add .
+git commit -m "m1"
+touch 2.java
+git add .
+git commit -m "m2"
+git log --oneline --graph
+git branch featx
+git switch featx
+git branch
+touch f1.java
+git add .
+git commit -m "f1"
+touch f2.java
+git add .
+git commit -m "f2"
+touch f3.java
+git add .
+git commit -m "f3"
+git log --oneline --graph
+git log --oneline --graph
+git switch main
+git log --oneline --graph
+git merge --no-ff featx
+git log --oneline --graph
+
+
+
+
+  517  git init newrepo
+  518  cd newrepo/
+  519  clear
+  520  touch 1.java
+  521  git add .
+  522  git commit -m "m1"
+  523  touch 2.java
+  524  git add .
+  525  git commit -m "m2"
+  526  git branch
+  527  git branch defect
+  528  git branch featx
+  529  git branch
+  530  git log --oneline
+  531  git switch
+  532  git switch defect
+  533  touch d1.java
+  534  git add .
+  535  git commit -m "d1"
+  536  touch d2.java
+  537  git add .
+  538  git commit -m "d2"
+  539  clear
+  540  git log --oneline
+  541  git switch featx
+  542  touch f1.java
+  543  git add .
+  544  git commit -m "f1"
+  545  touch f1.java
+  546  git add .
+  547  git commit -m "f2"
+  548  git log --oneline
+  549  touch f2.java
+  550  git add .
+  551  git commit -m "f2"
+  552  git log --oneline
+  553  git switch master
+  554  git log --oneline
+  555  git merge defect
+  556  git log --oneline
+  557  git switch featx
+  558  git log --oneline
+  559  touch f3.java
+  560  git add .
+  561  git commit -m "f3"
+  562  git switch master
+  563  git branch
+  564  git log --oneline
+  565  git merge featx
+  566  clear
+  567  git log --oneline
+  568  git reset --hard 487337d
+  569  git log --oneline
+  570  git switch featx
+  571  git log --oneline
+  572  git merge master
+  573  git log --oneline
+  574  git rest --hard a693d4f
+  575  git reset --hard a693d4f
+  576  git log --oneline
+  577  touch f1.java
+  578  git add .
+  579  git commit -m "f1"
+  580  touch f2.java
+  581  git add .
+  582  git commit -m "f2"
+  583  git log --oneline
+  584  git config --global --list
+  585  git rebase master
+  586  git log --oneline
+  587  git switch master
+  588  git merge featx
+  589  git log --oneline
+
+
+
+
+  634  git log --oneline
+  635  git reset --soft 1a9ecae
+  636  git log --oneline
+  637  git status
+  638  ls
+  639  git show abc6040
+  640  git show 1a9ecae
+  641  git reset --soft e783bb4
+  642  git log --oneline
+  643  git status
+  644  git log --oneline
+  645  git commit -m "r"
+  646  touch 5.java
+  647  git add .
+  648  git commit -m "f2"
+  649  git log --oneline
+  650  git reset --mixed e783bb4
+  651  git log --oneline
+  652  git status
+  653  ls
+  654  git add .
+  655  git commit -m "t"
+  656  clear
+  657  ls
+  658  git log --oneline
+  659  ls
+  660  git reset --hard e783bb4
+  661  git log --oneline
+  662  git status
+
+
+  666  git log --oneline
+  667  ls
+  668  git status
+  669  git reflog
+  670  git merge 3e394b6
+  671  ls
+  672  git log --oneline
+  673  git merge 3e06dc3
+  674  clear
+  675  git log --oneline
+  676  ls
+  677  git reflog
+
+
+
+  713  cd repo1/
+  714  git log --oneline
+  715  git reflog
+  716  git log --oneline
+  717  git l
+  718  clear
+  719  git branch
+  720  git log --oneline
+  721  git branch test  # git checkout -b test / git switch -c test
+  722  git branch
+  723  git switch test
+  724  git branch
+  725  git log --oneline
+  726  ls
+  727  touch t1.jva
+  728  git add .
+  729  git commit -m "t1"
+  730  touch t2.java
+  731  git add .
+  732  git commit -m "t2'
+  733  git commit -m "t2"
+  734  touch t3.java
+  735  git add .
+  736  git commit -m "t3"
+  737  git log --oneline
+  738  git switch master
+  739  git log --oneline
+  740  git branch
+  741  git status
+  742  ls
+  743  git log --oneline test
+  744  git branch
+  745  git log --oneline --all
+  746  git log --oneline featy
+  747  git log --oneline feat
+  748  git log --oneline master
+  749  git log --oneline test
+  750  git merge --squash test
+  751  git log --oneline master
+  752  git log --oneline test
+  753  git status
+  754  git commit -m "m5"
+  755  git log --oneline
+
+
+  757  git branch
+  758  git branch -d feat
+  759  git branch -D feat
+  760  git branch -d test
+  761  git branch -D test
+  762  git branch
+  763  git branch new
+  764  git branch
+  765  git switch new
+  766  git branch
+  767  git log --oneline
+  768  ls
+  769  vi t1.jva
+  770  git add .
+  771  git commit -m "n1"
+  772  touch n1.java
+  773  git add .
+  774  git commit -m "n2"
+  775  ls
+  776  vi t2.java
+  777  git add .
+  778  git commit -m "n3"
+  779  clear
+  780  git log --oneline
+  781  git switch master
+  782  git branch
+  783  ls
+  784  cat t1.jva
+  785  cat t2.java
+  786  git branch
+  787  git cherry-pick new
+  788  cat t2.java
+  789  git log --oneline
+  790  git show 739cc3b
+  791  cat t2.java
+  792  git log --oneline
+  793  git log --oneline new
+  794  git log --oneline master
+  796  git cherry-pick e6c1f44
+  797  git log --oneline master
+  798  cat t1.jva
+  799  git show e6c1f44
+
+
+  803  git log --oneline new
+  804  git log --oneline master
+  805  cd ..
+  806  cd projectK/
+  807  git log --oneline
+  808  git branch
+  809  clear
+  810  git log --oneline
+  811  git log --oneline --all
+  812  git log
+  813  git log --author naresh
+  814  git log --author Nirbhay
+  815  git log --author leaddevops
+  816  clear
+  817  git log --grep "tesst"
+  818* git log --
+  819  git log -n 3
+  820  git log --grep "te*"
+  821  clear
+  822  git log --since "3 days ago"
+  823  git log --since "1 days ago"
+  824  git log --before "1 days ago"
+  825  git log --before "3 days ago"
+  826  git log --before "2 days ago"
+  827  git log -n 2
+  828  git show 9d7366616669e7ada58315f36319ec8ec9e2fa20
+  829  git log -n 2 --stat
+  830  git log  --stat
+  831  git log --oneline  --stat
+
+  833  git shortlog
+  834  git shortlog -e
+  835  git shortlog -e -n
+  836  git shortlog -e -n -s
+
+
+
+  845  vi 3.java
+  846  clear
+  847  git status
+  848  git add .
+  849  git status
+  850  git pull
+  851  git stash
+  852  git status
+  853  git pull
+  854  git status
+  855  clear
+  856  git status
+  857  touch n6.java
+  858  git add .
+  859  git status
+  860  git stash
+  861  git stash --list
+  862  clear
+  863  git stash list
+  864  touch 77.java
+  865  git add .
+  866  git stash
+  867  git stash list
+  868  git stash show stash@{0}
+  869  git stash pop
+  870  git stash list
+  871  git stash apply stash@{1}
+  872  git stash list
+  873  git stash drop stash@{1}
+  874  git status
+  875  git branch
+  876  git checkout defct
+  877  git checkout defect
+  878  vi 3.java
+  879  git status
+  880  git add .
+  881  git commit -m "mc"
+  882  clear
+  883  git status
+  884  git stash pop
+  885  git status
+  886  git branch
+  887  git checkout defect
+  888  git branch
+  889  git status
+  890  git switch featy
+  891  git stash
+  892  git status
+  893  git stash -h
+
+
+
+  898  git branch
+  899  git log --oneline
+  900  git checkout f95f866
+  901  git branch
+  902  git log
+  903  clear
+  904  git branch
+  905  git log --oneline
+  906  git checkout -
+  907  git branch
+  908  git log --oneline
+  909  git checkout -b 8460860
+  910  git branch
+  911  git checkout 80d60c3
+  912  git branch
+  913  touch d1.java
+  914  git add .
+  915  git commit -m "d1"
+  916  git log --oneline
+  917  git branch
+  918  git checkout -b temp-b
+  919  git log --oneline
+  920  git branch
+  921  git checkout 7fe57e6
+  922  git branch
+  923  touch 56.java
+  924  git add .
+  925  git status
+  926  git branch
+  927  git stash
+  928  git status
+  929  git stash list
+  930  git branch
+  931  git checkout -
+  932  git status
+  933  git stash list
+  934  git stash pop
+  935  git status
+  936  git branch
+
+
+  942  git pull
+  943  clear
+  944  cd projectK/
+  945  git remote -v
+  946  ls
+  947  git log
+  948  clear
+  949  git status
+
+
